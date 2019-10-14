@@ -1,12 +1,8 @@
 import matplotlib.pyplot as plt
-from sklearn import datasets, linear_model
-import numpy as np
 import pandas as pd
-from sklearn.metrics import mean_squared_error, r2_score
 from sklearn import tree
 from sklearn.datasets import load_wine
 from sklearn.model_selection import train_test_split
-import graphviz
 
 
 #初始化一个决策树分类器
