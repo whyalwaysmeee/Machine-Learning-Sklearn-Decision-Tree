@@ -1,0 +1,5 @@
+tree1是无splitter，也就是splitter = best
+tree2是splitter = random
+tree3是max_depth为3
+tree4是min_samples_leaf为10
+tree5是min_samples_split为50
