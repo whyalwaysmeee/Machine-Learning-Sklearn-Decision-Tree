@@ -44,7 +44,7 @@ print(train_score)
 #用中文标签替换
 feature_name = ['酒精','苹果酸','灰','灰的碱性','镁','总酚','类黄酮','非黄烷类酚类','花青素','颜 色强度','色调','od280/od315稀释葡萄酒','脯氨酸']
 #将生成的决策树以dot文件的形式输出，如果不加out_file也是默认输出dot文件但是不会保存下来，而是由下面的Source函数直接转化为gv文件
-#使用Source及view方法打开生成的决策树不能够显示中文字符，所以我们采用out_file将dot文件保存，用记事本打开dot文件后修改器中的参数
+#使用Source及view方法打开生成的决策树不能够显示中文字符，所以我们采用out_file将dot文件保存，用记事本打开dot文件后修改其中的参数
 #使其允许中文字符，最后在cmd中将dot文件转化为任意可以用作查看决策树的类型，如pdf、png等再来查看
 dot_data = tree.export_graphviz(clf,out_file="tree5.dot"
                     ,feature_names=feature_name
@@ -76,4 +76,4 @@ for i in range(10):
 plt.plot(range(1,11), test, color='red', label='max_depth')
 plt.legend()
 plt.show()
-#观察曲线，选取导数值变小幅度最大的一个点。因为从这个点以后score不会有很大的变化，而之前score变化显著
+#观察曲线，选取导数值变小幅度最大的一个点所对应的的depth。因为从这个点以后score不会有很大的变化，而之前score变化显著
